@@ -1,0 +1,28 @@
+model:
+    name: 'SelfSupModel'
+    depth_net:
+        name: 'PackNet01'
+        version: '1A'
+    pose_net:
+        name: 'PoseNet'
+        version: ''
+    params:
+        crop: ''
+        min_depth: 0.0
+        max_depth: 200.0
+datasets:
+    augmentation:
+        image_shape: (256, 256)
+    test:
+        dataset: ['CRLA']
+        path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys/multivehicle_depthCv.txt']
+        split: ['val']
+        depth_type: ['lidar']
+        cameras: [['camera_01']]
+save:
+    folder: '../results/'
+    depth:
+        rgb: True
+        viz: True
+        npz: True
+        png: True

@@ -6,6 +6,7 @@ These datasets output images, camera calibration, depth maps and poses for depth
 
 - KITTIDataset: reads from KITTI_raw
 - DGPDataset: reads from a DGP .json file
+- CARLADataset: reads from katefgroup kitti folder
 - ImageDataset: reads from a folder containing image sequences (no support for depth maps)
 
 """
