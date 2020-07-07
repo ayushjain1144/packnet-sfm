@@ -28,7 +28,7 @@ datasets:
         num_workers: 8
         dataset: ['CARLA']
         path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys']
-        split: ['multivehicle_depthCt.txt']
+        split: ['multivehicle_depth_Ct.txt']
         depth_type: ['lidar']
         cameras: [['camera_01']]
         repeat: [5]
@@ -36,7 +36,7 @@ datasets:
         num_workers: 8
         dataset: ['CARLA']
         path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys']
-        split: ['multivehicle_depthCv.txt']
+        split: ['multivehicle_depth_Cv.txt']
         depth_type: ['lidar']
         cameras: [['camera_01']]
 

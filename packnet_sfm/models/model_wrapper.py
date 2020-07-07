@@ -538,12 +538,12 @@ def setup_dataset(config, mode, requirements, **kwargs):
 
         # Carla Dataset
         elif config.dataset[i] == 'CARLA':
-            from packnet_sfm.datasets.image_dataset import CARLADataset
+            from packnet_sfm.datasets.carla_dataset import CARLADataset
             dataset = CARLADataset(
                 config.path[i], config.split[i],
                 **dataset_args, **dataset_args_i,
             )
-            
+
         else:
             ValueError('Unknown dataset %d' % config.dataset[i])
 

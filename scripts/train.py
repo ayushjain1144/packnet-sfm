@@ -2,6 +2,9 @@
 
 import argparse
 
+import sys
+sys.path.append('/home/ayushj2/packnet-sfm')
+import packnet_sfm
 from packnet_sfm.models.model_wrapper import ModelWrapper
 from packnet_sfm.models.model_checkpoint import ModelCheckpoint
 from packnet_sfm.trainers.horovod_trainer import HorovodTrainer

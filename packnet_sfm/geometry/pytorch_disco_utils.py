@@ -7,12 +7,12 @@ from PIL import Image  # using pillow-simd for increased speed
 import torch
 import torch.utils.data as data
 from torchvision import transforms
-import ipdb 
-st = ipdb.set_trace
+# import ipdb 
+# st = ipdb.set_trace
 import pickle
 from matplotlib import cm
 device = "cpu"
-import open3d as o3d
+# import open3d as o3d
 def safe_inverse(a): #parallel version
     B, _, _ = list(a.shape)
     inv = a.clone()
@@ -23,14 +23,14 @@ def safe_inverse(a): #parallel version
 
     return inv
     
-def make_pcd(pts):
-    pcd = o3d.geometry.PointCloud()
-    pcd.points = o3d.utility.Vector3dVector(pts[:, :3])
-    # if the dim is greater than 3 I expect the color
-    if pts.shape[1] == 6:
-        pcd.colors = o3d.utility.Vector3dVector(pts[:, 3:] / 255.\
-            if pts[:, 3:].max() > 1. else pts[:, 3:])
-    return pcd
+# def make_pcd(pts):
+#     pcd = o3d.geometry.PointCloud()
+#     pcd.points = o3d.utility.Vector3dVector(pts[:, :3])
+#     # if the dim is greater than 3 I expect the color
+#     if pts.shape[1] == 6:
+#         pcd.colors = o3d.utility.Vector3dVector(pts[:, 3:] / 255.\
+#             if pts[:, 3:].max() > 1. else pts[:, 3:])
+#     return pcd
 
 def scale_intrinsics(K, sx, sy):
     fx, fy, x0, y0 = split_intrinsics(K)
