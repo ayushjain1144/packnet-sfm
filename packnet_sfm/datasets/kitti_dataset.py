@@ -86,8 +86,8 @@ class KITTIDataset(Dataset):
         self.forward_context_paths = []
 
         self.with_context = (backward_context != 0 or forward_context != 0)
-        self.split = file_list.split('/')[-1].split('.')[0]
-
+        self.split = file_list.split('/')[1].split('.')[0]
+-
         self.train = train
         self.root_dir = root_dir
         self.data_transform = data_transform
