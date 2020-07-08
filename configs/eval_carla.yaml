@@ -14,11 +14,10 @@ datasets:
     augmentation:
         image_shape: (256, 256)
     test:
-        dataset: ['CRLA']
-        path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys/multivehicle_depthCv.txt']
-        split: ['val']
+        dataset: ['CARLA']
+        path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys']
+        split: ['multivehicle_depth_Cv.txt']
         depth_type: ['lidar']
-        cameras: [['camera_01']]
 save:
     folder: '../results/'
     depth:

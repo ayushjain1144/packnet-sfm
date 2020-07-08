@@ -38,12 +38,11 @@ datasets:
         split: ['multivehicle_depth_Cv.txt']
         depth_type: ['lidar']
 
-    # test:
-    #     num_workers: 8
-    #     dataset: ['CARLA']
-    #     path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys']
-    #     split: ['multivehicle_depthCv.txt']
-    #     depth_type: ['lidar']
-    #     cameras: [['camera_01']]
+    test:
+        num_workers: 0
+        dataset: ['CRLA']
+        path: ['/projects/katefgroup/datasets/shamit_carla_correct/npys']
+        split: ['multivehicle_depth_Cv.txt']
+        depth_type: ['lidar']
     
      

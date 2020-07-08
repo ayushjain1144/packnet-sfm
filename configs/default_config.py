@@ -19,9 +19,9 @@ cfg.arch.max_epochs = 50                # Maximum number of epochs
 ### CHECKPOINT
 ########################################################################################################################
 cfg.checkpoint = CN()
-cfg.checkpoint.filepath = ''            # Checkpoint filepath to save data
-cfg.checkpoint.save_top_k = 5           # Number of best models to save
-cfg.checkpoint.monitor = 'loss'         # Metric to monitor for logging
+cfg.checkpoint.filepath = '../ckpt_carla/train1.ckpt'            # Checkpoint filepath to save data
+cfg.checkpoint.save_top_k = -1           # Number of best models to save
+cfg.checkpoint.monitor = 'val_loss'         # Metric to monitor for logging
 cfg.checkpoint.monitor_index = 0        # Dataset index for the metric to monitor
 cfg.checkpoint.mode = 'auto'            # Automatically determine direction of improvement (increase or decrease)
 cfg.checkpoint.s3_path = ''             # s3 path for AWS model syncing
