@@ -13,6 +13,9 @@ from packnet_sfm.utils.load import set_debug, filter_args_create
 from packnet_sfm.utils.horovod import hvd_init, rank
 from packnet_sfm.loggers import WandbLogger
 
+import ipdb 
+
+st = ipdb.set_trace
 
 def parse_args():
     """Parse arguments for training script"""
@@ -59,6 +62,7 @@ def train(file):
     trainer = HorovodTrainer(**config.arch, checkpoint=checkpoint)
 
     # Train model
+    # st()
     trainer.fit(model_wrapper)
 
 

@@ -20,6 +20,8 @@ from packnet_sfm.utils.reduce import all_reduce_metrics, reduce_dict, \
 from packnet_sfm.utils.save import save_depth
 from packnet_sfm.models.model_utils import stack_batch
 
+import ipdb
+st = ipdb.set_trace
 
 class ModelWrapper(torch.nn.Module):
     """
@@ -183,6 +185,7 @@ class ModelWrapper(torch.nn.Module):
     def training_step(self, batch, *args):
         """Processes a training batch."""
         batch = stack_batch(batch)
+        # st()
         output = self.model(batch, progress=self.progress)
         return {
             'loss': output['loss'],
